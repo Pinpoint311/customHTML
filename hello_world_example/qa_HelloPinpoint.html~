@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     <title>Hello Pinpoint</title>    
+     <!-- Alert boxes by SweetAlert (http://t4t5.github.io/sweetalert/) start -->
+     <script src="http://www.perfectoutlook.com/pinpoint311/SweetAlert/dist/sweetalert.min.js"></script> 
+     <link rel="stylesheet" type="text/css" href="http://www.perfectoutlook.com/pinpoint311/SweetAlert/dist/sweetalert.css">
+     <!-- Alert boxes by SweetAlert  end -->
+    
+      <!-- Bootstrap  start -->
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+     <link href='bootstrap.min.css' rel='stylesheet' type='text/css'> 
+        
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>    
+     <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>    
+     <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/dist/css/bootstrap.css">     
+     <script type='text/javascript' src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+     <!-- Bootstrap  start -->
+     
+     <!-- Custom 99 support start -->
+      <link href="qa_pinpoint311.css" rel='stylesheet' type='text/css'>
+      <script type='text/javascript' src="qa_pinpoint311.js"></script>
+      <script type='text/javascript' src="qa_pinpoint311_events.js"></script>
+     <!-- Custom 99 support  end -->
+     <link href="jquery.mCustomScrollbar.css" rel='stylesheet' type='text/css'>
+     <script type='text/javascript' src="jquery.mCustomScrollbar.concat.min.js"></script>
+     <!-- Local Storage support start -->
+        <script type='text/javascript' src="http://www.perfectoutlook.com/pinpoint311/jStorage.js"></script>
+        <script type='text/javascript' src="http://www.perfectoutlook.com/pinpoint311/jstorage.min.js"></script>  
+    <script type='text/javascript' src="http://www.perfectoutlook.com/pinpoint311/xdLocal/dist/scripts/xdLocalStoragePostMessageApi.min.js"></script>
+     <!-- Local Storage support end -->
+  </head>
+    
+  <body onLoad="logbookRefresh()">
+  <div class="overlayFixed"></div>
+    <main>
+     <section class="addDetails helloPinPoint">
+        
+		
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+				<h2 class="text-center">Hello Pinpoint!</h2>
+				
+              <form:form class="form-horizontal" name="createTickit" id ="createTickit" action="createTickit" commandName="ticketFormBean" enctype="multipart/form-data" method="post" onsubmit="return false;">
+
+              		<div id="imageContainer" class="form-group">
+              			<img src="" />
+              		</div>
+					
+              		<div id="firstContainer">
+                    
+					<div class="form-group form-group-space">
+                      <div class="">
+					  	<label for="inputEmail3" class="col-xs-3 control-label">Subject</label>
+					  
+                      <div class="col-xs-9">
+                        <span id="tickitSubject"></span>
+                      </div>
+					  </div>
+                    </div>
+                    
+		    <div class="form-group">
+                      <div class="col-xs-12 tickitMsgBody">
+                        <span id="tickitMsgBody">
+                        </span>
+                      </div>
+                    </div>
+              		</div>
+          		
+            		 <div class="mapCustom ">
+            	       <div class="cc-map-wrapper">
+            	           <div id="map_canvas" class="mapStyle animate"></div>	   
+            	       </div>
+            		 </div>
+
+            		<div id="imageBtnContainer" class="clearfix">
+            			<div class="pull-left">
+            				<label class="radio-label"><input id="imageRadioBtn" type="radio" disabled/> Image</label>
+            			</div>
+            			<div class="pull-right text-right">
+            				<button class="btn btn-default comment-text comment_comment imageBtn" onClick="showImage();" disabled="disabled">Show Image</button>
+            			</div>
+            		</div>
+					
+            		<div class="form-group" id="secondContainer">
+						<div class="col-xs-12">
+							<p id="address" class="text-center"></p>
+						</div>
+                	</div>
+					<div class="thirdContainer clearfix">
+							<label class="col-xs-3 control-label ">
+							Choose:
+							</label>
+							<div class="col-xs-9">
+								<div><label for="" class="radio-label"><input type="radio" name="choice" value="impressive">Impressive</label></div>
+								<div><label for="" class="radio-label"><input type="radio" name="choice" value="Meh" >Meh</label></div>
+							</div>
+					  </div>
+	            
+					<div class="form-group clearfix ">                  
+					  <div class="col-xs-12 div-btns">
+					  <button class="btn btn-default comment-text comment_comment btn_bg" id="backBtn" onClick="backToOriginal();">Back</button>
+					  <button class="btn btn-default comment-text comment_comment btn_bg" id="showImageBtn" onClick="showImage();" disabled="disabled">Show Image</button>
+					  <button class="btn btn-default comment-text comment_comment btn_bg" id="showMapBtn" onClick="showMap();" >Show map</button>
+					  <button class="btn btn-default comment-text comment_comment pull-right btn_bg" id="doneBtn" onClick="closeForm();">Done</button>
+					  <button class="btn btn-default comment-text comment_comment pull-right" id="FitBtn" onClick="SendToFit();">Send to Fit</button
+					</div>
+					</div>
+					
+              </form:form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>  
+  </body>
+</html>
+

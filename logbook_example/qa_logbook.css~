@@ -1,0 +1,205 @@
+.selectStyleValidate {padding:3px;
+    margin: 0;
+    -webkit-border-radius:2px;
+    -moz-border-radius:1px;
+    border-radius:3px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 1px 0 #ccc, 0 -1px #fff inset;
+    background: #F6CED8;
+    color:#FF0000;
+    border:1px;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;  }
+.selectStyle {padding:3px;
+    margin: 0;
+    -webkit-border-radius:2px;
+    -moz-border-radius:1px;
+    border-radius:3px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 1px 0 #ccc, 0 -1px #fff inset;
+    background:#EFEFFB;
+    color:#888;
+    border:1px;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;  }
+.addDetails{border: 1px solid #ffc; border-radius: 5px; float: none; margin: y0px auto 10px; padding:40px 0px 20px; width: 75%;}
+.addDetails h2{font-size:26px;padding-left:10px;color:#fff;}
+.form-horizontal .control-label.col-xs-3,.addDetails .col-xs-9{width:100%; text-align:left;padding-bottom:5px;color:#ccc;}
+.form-group label,.form-control,#address{color:#fff;}
+body{background:url("bkg.png") repeat-y right top;width:100%;background-size:cover;}
+.addDetails .form-control {background:transparent;}
+.btn-default:hover,.btn-default{background-color: #5bc0de;border-color: #5bc0de;color: #fff;font-weight: 500;}
+.btn-big:hover,.btn-big{background-color: #5bc0de;border-color: #5bc0de;color: #fff;font-weight: 500; height: 500px;}
+.form-horizontal .control-label{text-align:left;}
+#commentArea,#doneBtn{display:none;}
+#comment{resize:none;color:#000;}
+animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: center;
+	border-radius: 10px;
+	font-family: 'Arial', cursive;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+    padding: 5px 20px;
+    border: none;
+    box-shadow: 0 2px 5px #000;
+}
+
+.red
+{
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+}
+
+.green
+{
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
+}
+
+.action-button.blue:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: none;
+}
+
+@media screen and (min-width:650px){
+   .addDetails{width:60%;}
+   .addDetails textarea.form-control{ height:70px;}
+
+}
+
+/*@media screen and (max-width:480px){
+   .addDetails{width:95%;}
+
+}*/
+
+@media screen and (max-width:380px){
+   .addDetails{width:95%;}
+
+}
+
+@media screen and (max-height:1200px){
+
+}
+#category-select {
+    left: 0px;
+    top: 0px;
+    /*border: 1px solid #D3D3D3;*/
+     margin: 10px 0px 0px 0px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    text-align: right;
+}
+    
+#category-select label {
+    float: center;
+    margin: 1px;
+    color: #6E6E6E;      
+}
+  
+.label-class{
+width:95px; text-align:left;
+}
+
+.text-class{
+width:100%; padding:10px;
+border-radius: 0;border: 1px solid #ccc;
+}
+
+.form-block{
+padding-bottom:2px;
+margin-bottom: 10px
+}
+
+.addDetails textarea.form-control{
+height:90px;
+}
+
+.heading{font-weight: 600; font-size: 22px}
+
+@media screen and (max-width: 1280px) {
+	.text-class{
+		/*width:87.5%;*/
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.text-class{
+		/*width:84%;*/
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.text-class{
+		/*width:78%; */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.text-class{
+		/*width:77%;*/
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.text-class{
+		/*width:72%; */
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.text-class{
+		/*width:70%; */
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.text-class{
+		/*width:62%; */
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.text-class{
+		/*width:52%; */
+	}
+}

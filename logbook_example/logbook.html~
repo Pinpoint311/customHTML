@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+     <title>Pinpoint Logbook</title>    
+     <!-- Alert boxes by SweetAlert (http://t4t5.github.io/sweetalert/) start -->
+     <script src="http://www.perfectoutlook.com/pinpoint311/SweetAlert/dist/sweetalert.min.js"></script> 
+     <link rel="stylesheet" type="text/css" href="http://www.perfectoutlook.com/pinpoint311/SweetAlert/dist/sweetalert.css">
+     <!-- Alert boxes by SweetAlert  end -->
+    
+      <!-- Bootstrap  start -->
+     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+     <link href='bootstrap.min.css' rel='stylesheet' type='text/css'>    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>    
+     <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>    
+     <link rel="stylesheet" type="text/css" href="http://getbootstrap.com/dist/css/bootstrap.css">     
+     <script type='text/javascript' src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+     <!-- Bootstrap  start -->
+     
+     <!-- Custom 99 support start -->
+      <link href="qa_logbook.css" rel='stylesheet' type='text/css'>
+      <script type='text/javascript' src="moment.js"></script>
+      <script type='text/javascript' src="qa_logbook.js"></script>
+      <script type='text/javascript' src="qa_logbook_events.js"></script>
+     <!-- Custom 99 support  end -->
+     <!-- Local Storage support start -->
+        <script type='text/javascript' src="http://www.perfectoutlook.com/pinpoint311/jStorage.js"></script>
+        <script type='text/javascript' src="http://www.perfectoutlook.com/pinpoint311/jstorage.min.js"></script>  
+    <script type='text/javascript' src="http://www.perfectoutlook.com/pinpoint311/xdLocal/dist/scripts/xdLocalStoragePostMessageApi.min.js"></script>
+     <!-- Local Storage support end -->
+  </head>
+    
+  <body onLoad="logbookRefresh()">
+  <div class="overlayFixed"></div>
+    <main>
+      <section class="addDetails">
+				
+            <div class="container-fluid">
+          
+              <div class="col-sm-12">
+               <form:form class="form-horizontal" name="createTickit" id ="createTickit" action="createTickit" 
+                         commandName="ticketFormBean"     enctype="multipart/form-data" method="post" onsubmit="return false;">                   
+		        
+       <!-- panels group starts here -->   
+                <div class="panel-group" id="accordion" >
+              
+                  <!-- panel 1 starts here --> 
+                  <div class="panel panel-default"  >
+                    <div class="panel-heading" data-toggle="collapse" data-parent="#accordion"  href="#collapseOne">
+                      <h4 class="panel-title heading">                        
+                          Log Action                          
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">
+                                           
+                       <div id="triage">
+                           <div id="fieldArea" class="logclass">
+
+						   	<div class="form-block">
+								<label for="CurrentTime" class="label-class">Current time:</label>
+								<input type="text" id="CurrentTime" class="text-class"> 
+		                    </div>
+							
+							<div class="form-block">
+								<label for="CurrentAddress" class="label-class">Location:</label>
+								<input type="text" id="CurrentAddress" class="text-class">                            
+							</div>
+							
+							<div class="form-block">
+								<label for="elapsedtime" class="label-class">Elapsed time:</label>
+								<input type="text" id="elapsedtime" class="text-class"> 
+							</div>
+
+                           </div>  
+
+			   <div id="commentArea">
+				   <textarea class="form-control" rows="3" id="comment" name="comment" placeholder="Comments" maxlength="200"></textarea>
+                           </div>                            
+                           
+                    <div id="category-select" >
+                        <br>
+                       <center>
+                        <button class="action-button shadow animate blue"  id="startBtn" onClick="LogbookCaption(this);">Start</button>
+			<button class="action-button shadow animate blue"  id="doneBtn"  onClick="ajaxSubmitDetails();">Done</button>
+                       </center>
+                        <br>
+                    </div>
+                </div>                
+                      </div>                          
+                        
+                       
+                         
+            </div>
+          </div>        
+         
+         <!-- panels end here -->                 
+                
+              </form:form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>  
+  </body>
+</html>
+
